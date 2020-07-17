@@ -141,7 +141,7 @@ class MainScript():
     def __init__(self):
         self.model = to_device(CNN(),get_default_device())
         self.model.load_state_dict(torch.load('mask_best_model.pth'))
-        self.d = ImageFolder('RMDFDATA',transform=tt.ToTensor())
+        self.d = ImageFolder('RMDFDATA2',transform=tt.ToTensor())
 
     def predict_image(self,img):
         # img is a numpy array overhere
